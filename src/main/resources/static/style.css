@@ -1,0 +1,15 @@
+.homepage {
+    height: 100px;
+    width: 100%;
+    min-width: 100%;
+    background-image: url("food.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 150%;
+}
+
+.content {
+    width: 1000px;
+    margin: 50px auto;
+}
