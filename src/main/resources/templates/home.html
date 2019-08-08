@@ -11,6 +11,14 @@
 
 <h4>Tutaj będzie strona główna</h4>
 
+<ul>
+    <h3>Wybierz typ potrawy</h3>
+    <li th:each="cat: ${category}">
+    <a th:href="|/display/${cat.id}|" th:text="${cat.name}"></a>
+    </li>
+
+</ul>
+
 
 <ul>
     <h3>Najpopularniejsze dania</h3>
