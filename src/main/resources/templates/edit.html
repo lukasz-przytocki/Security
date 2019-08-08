@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Edycja</title>
+</head>
+<body>
+
+
+<!--<p th:text="|Edytujesz posiłek o id: ${meal.id}|"></p>-->
+
+<form action="/edit" th:object="${recipeToEdit}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <input type="text" th:field="*{name}" />
+    <input type="text" th:field="*{ingredients}" />
+    <input type="text" th:field="*{equipment}" />
+    <input type="text" th:field="*{procedure}" />
+    <select th:field="*{category}">
+        <option th:each="cat: ${category}"
+                th:text="${cat.getId()}"
+                th:value="${cat.getId()}">
+        </option>
+    </select>
+    <input type="submit" value="Zapisz zmiany" />
+</form>
+
+</body>
+</html>
