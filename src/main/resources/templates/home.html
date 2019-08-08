@@ -17,11 +17,11 @@
     <li th:each="popular: ${mostPolular}">
         <span style="font-weight:bold " th:text="${popular.name}"></span>
         <a th:href="|/recipe/${popular.id}">Sprawdź!</a>
-
     </li>
 
 </ul>
 
+<a style="font-weight: bold" href="/add">Dodaj własny przepis</a>
 
 </body>
 </html>
