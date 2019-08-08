@@ -17,10 +17,12 @@
     <input type="text" th:field="*{ingredients}" />
     <input type="text" th:field="*{equipment}" />
     <input type="text" th:field="*{procedure}" />
+
     <select th:field="*{category}">
         <option th:each="cat: ${category}"
-                th:text="${cat.getId()}"
-                th:value="${cat.getId()}">
+                th:value="${cat.id}"
+                th:text="${cat.name}">
+
         </option>
     </select>
     <input type="submit" value="Zapisz zmiany" />
