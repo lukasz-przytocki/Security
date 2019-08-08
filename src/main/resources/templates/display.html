@@ -14,10 +14,13 @@
 <ul>
     <li th:each="display: ${displaySelected}">
         <a th:href="|/recipe/${display.id}|" th:text="${display.name}"></a>
+        <a style="color: red" th:href="|/delete/${display.id}|">Usuń</a>
+
     </li>
 
 </ul>
-</div>
+
+<a href="/">Powrót</a>
 
 </body>
 </html>

@@ -23,17 +23,24 @@ public class RecipeController {
         Recipe recipe = new Recipe();
         Optional<Recipe> optional = recipeRepository.findById(id);
 
-        if(optional!=null){
-            recipe=optional.get();
-            model.addAttribute("result",recipe);
+        if (optional != null) {
+            recipe = optional.get();
+            model.addAttribute("result", recipe);
             return "details";
-        }else {
+        } else {
+            return "error";
+        }
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(Model model, @PathVariable Long id) {
+
+        if (recipeRepository.findById(id) != null) {
+            recipeRepository.deleteById(id);
+            return "redirect:/";
+        } else {
             return "error";
         }
 
-}
-
-
-
-
+    }
 }
