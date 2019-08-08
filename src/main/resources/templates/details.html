@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deails</title>
+</head>
+<body>
+
+<H3>Product details</H3>
+
+
+<ul>
+    <li th:object="${result}">
+
+<!--        <textarea th:text="*{name}" placeholder="Nazwa"></textarea> <br/>-->
+        <span th:text="*{ingredients}"> </span>
+
+    </li>
+
+</ul>
+
+
+<a href="/">Powrót</a>
+
+</body>
+</html>
