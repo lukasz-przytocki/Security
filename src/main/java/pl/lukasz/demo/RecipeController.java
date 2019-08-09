@@ -68,4 +68,18 @@ public class RecipeController {
     }
 
 
+    @GetMapping("/like/{id}")
+    public String like(Model model, @PathVariable Long id) {
+        Optional<Recipe> optional = recipeRepository.findById(id);
+
+        if (optional != null) {
+            Recipe recipe = new Recipe();
+            recipe = optional.get();
+            recipe.setLikeNumber(recipe.getLikeNumber()+1);
+            recipeRepository.save(recipe);
+            return "redirect:/";
+        } else {
+            return "error";
+        }
+    }
 }

@@ -13,13 +13,13 @@
 
 <ul>
     <li th:object="${result}">
-<!--        <textarea th:text="*{name}" placeholder="Nazwa"></textarea> <br/>-->
         <span th:text="*{ingredients}"> </span><br/>
-        <a style="color: green" th:href="|/edit/${result.id}|">Edytuj</a>
+        <a style="color: green" th:href="|/edit/${result.id}|">Edytuj</a><br/>
+        <a style="color: blue" th:href="|/like/${result.id}|">Like</a>
+
 
     </li>
 </ul>
-
 
 
 
