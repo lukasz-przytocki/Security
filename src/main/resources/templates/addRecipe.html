@@ -8,7 +8,7 @@
 
 </head>
 <body>
-
+<div style="width: 90%; margin:30px">
 <form action="/add" method="post" th:object="${newRecipe}">
 
     <input type="text" th:field="*{name}"/>
@@ -31,6 +31,6 @@
     <a href="/">Anuluj</a>
 
 </form>
-
+</div>
 </body>
 </html>

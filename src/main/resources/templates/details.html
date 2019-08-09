@@ -4,16 +4,22 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
-    <title>Deails</title>
+    <title>Details</title>
 </head>
 <body>
 
-<H3>Product details</H3>
+<H3>Szczeóły przygotowania</H3>
 
 
 <ul>
     <li th:object="${result}">
+        <span style="font-weight: bold" th:text="*{name}"></span><br/>
+        <p style="font-weight: bold">Narzędzia</p><br/>
+        <span th:text="*{equipment}"> </span><br/>
+        <p style="font-weight: bold">Składniki</p><br/>
         <span th:text="*{ingredients}"> </span><br/>
+        <p style="font-weight: bold">Kroki</p><br/>
+        <span th:text="*{procedure}"> </span><br/>
         <a style="color: green" th:href="|/edit/${result.id}|">Edytuj</a><br/>
         <a style="color: blue" th:href="|/like/${result.id}|">Like</a>
 
