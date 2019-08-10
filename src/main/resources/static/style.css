@@ -2,22 +2,31 @@
     height: 100px;
     width: 100%;
     min-width: 100%;
-    background-image: url("food.jpg");
+    /*background-image: url("food.jpg");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: 150%;
 }
 
-.content {
-    width: 1000px;
-    margin: 50px auto;
+.common {
+    width: 90%;
+    margin: 30px;
+}
+
+.header {
+    width: 100%;
+    background-image: url('food.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 50px 100px;
 }
 
 .background {
     height: 100%;
     width: 100%;
     min-width: 100%;
-    background-image: url("background.jpg");
+    /*background-image: url("background.jpg");*/
     background-position: center;
 }
