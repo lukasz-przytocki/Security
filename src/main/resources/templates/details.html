@@ -7,29 +7,24 @@
     <title>Details</title>
 </head>
 <body>
+<div style="width: 90%; margin:30px">
 
-<H3>Szczeóły przygotowania</H3>
-
-
-<ul>
-    <li th:object="${result}">
-        <span style="font-weight: bold" th:text="*{name}"></span><br/>
-        <p style="font-weight: bold">Narzędzia</p><br/>
-        <span th:text="*{equipment}"> </span><br/>
-        <p style="font-weight: bold">Składniki</p><br/>
-        <span th:text="*{ingredients}"> </span><br/>
-        <p style="font-weight: bold">Kroki</p><br/>
-        <span th:text="*{procedure}"> </span><br/>
+<div class="space">
+    <h4 style=" font-weight: bold; text-align: center" >Szczeóły przygotowania</h4>
+    <ul class="list-group list-group-flush" th:object="${result}">
+        <li class="list-group-item" th:text="*{name}">Name</li><br/>
+        <p style="font-weight: bold">Narzędzia</p>
+        <li class="list-group-item" th:text="*{equipment}">Name</li><br/>
+        <p style="font-weight: bold">Składniki</p>
+        <li class="list-group-item" th:text="*{ingredients}">Name</li><br/>
+        <p style="font-weight: bold">Kroki</p>
+        <li class="list-group-item" th:text="*{procedure}">Name</li><br/>
         <a style="color: green" th:href="|/edit/${result.id}|">Edytuj</a><br/>
         <a style="color: blue" th:href="|/like/${result.id}|">Like</a>
 
-
-    </li>
-</ul>
-
-
-
+    </ul><br/>
+</div>
 <a href="/">Powrót</a>
-
+</div>
 </body>
 </html>

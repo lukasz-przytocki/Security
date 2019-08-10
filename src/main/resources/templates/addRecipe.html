@@ -8,29 +8,45 @@
 
 </head>
 <body>
+
 <div style="width: 90%; margin:30px">
-<form action="/add" method="post" th:object="${newRecipe}">
+    <h4 style=" font-weight: bold; text-align: center" >Własny przepis</h4>
+    <form action="/add" method="post" th:object="${newRecipe}">
+        <div class="form-group">
+            <label for="name"  >Nazwa potrawy</label>
+            <textarea th:field="*{name}" class="form-control" rows="1" id="name"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tools"  >Narzędzia</label>
+            <textarea th:field="*{equipment}" class="form-control" rows="3" id="tools"></textarea>
+        </div>
 
-    <input type="text" th:field="*{name}"/>
-    <textarea rows="10" th:field="*{ingredients}"/>
-    <textarea rows="10" th:field="*{equipment}"/>
-    <textarea rows="10" th:field="*{procedure}"/>
+        <div class="form-group">
+            <label for="ingredients" >Składniki</label>
+            <textarea th:field="*{ingredients}" class="form-control" rows="5" id="ingredients"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="procedure" >Procedura</label>
+            <textarea th:field="*{procedure}" class="form-control" rows="10" id="procedure"></textarea>
+        </div>
+
+        <div  class="form-group">
+            <label for="category">Kategoria</label>
+            <select th:field="*{category}" class="form-control" id="category">
+                <option th:each="cat: ${category}"
+                        th:value="${cat.id}"
+                        th:text="${cat.name}">
+                </option>
+            </select>
+        </div>
+
+        <input type="submit" value="Dodaj!"/><br/>
+
+        <a href="/">Anuluj</a>
+    </form>
 
 
-    <select th:field="*{category}">
-
-        <option th:each="cat: ${category}"
-                th:value="${cat.id}"
-                th:text="${cat.name}">
-        </option>
-
-    </select>
-
-    <input type="submit" value="Dodaj!"/><br/>
-
-    <a href="/">Anuluj</a>
-
-</form>
 </div>
 </body>
 </html>

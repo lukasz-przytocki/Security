@@ -40,7 +40,7 @@ public class RecipeController {
 
         if (recipeRepository.findById(id) != null) {
             recipeRepository.deleteById(id);
-            return "redirect:/";
+            return "redirect:/all";
         } else {
             return "error";
         }

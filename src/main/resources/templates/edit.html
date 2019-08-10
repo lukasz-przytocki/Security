@@ -8,27 +8,48 @@
 </head>
 <body>
 
+<div style="width: 90%; margin:30px">
+    <form action="/edit" method="post" th:object="${recipeToEdit}">
+        <input type="hidden" th:field="*{id}"/>
+        <div class="form-group">
+            <label for="name">Nazwa potrawy</label>
+            <textarea th:field="*{name}" class="form-control" rows="1" id="name"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="tools">Narzędzia</label>
+            <textarea th:field="*{equipment}" class="form-control" rows="3" id="tools"></textarea>
+        </div>
 
-<!--<p th:text="|Edytujesz posiłek o id: ${meal.id}|"></p>-->
+        <div class="form-group">
+            <label for="ingredients">Składniki</label>
+            <textarea th:field="*{ingredients}" class="form-control" rows="5" id="ingredients"></textarea>
+        </div>
 
-<form action="/edit" th:object="${recipeToEdit}" method="post">
-    <input type="hidden" th:field="*{id}" />
-    <input type="text" th:field="*{name}" />
-    <input type="text" th:field="*{ingredients}" />
-    <input type="text" th:field="*{equipment}" />
-    <input type="text" th:field="*{procedure}" />
+        <div class="form-group">
+            <label for="procedure">Procedura</label>
+            <textarea th:field="*{procedure}" class="form-control" rows="10" id="procedure"></textarea>
+        </div>
 
-    <select th:field="*{category}">
-        <option th:each="cat: ${category}"
-                th:value="${cat.id}"
-                th:text="${cat.name}">
+        <div class="form-group">
+            <label for="category">Kategoria</label>
+            <select th:field="*{category}" class="form-control" id="category">
+                <option th:each="cat: ${category}"
+                        th:value="${cat.id}"
+                        th:text="${cat.name}">
+                </option>
+            </select>
+        </div>
 
-        </option>
-    </select>
-    <input type="submit" value="Zapisz zmiany" /><br/>
+        <input type="submit" value="Zapisz zmiany!"/><br/>
 
-    <a href="/">Anuluj</a>
-</form>
+        <a href="/">Anuluj</a>
+    </form>
+
+
+</div>
+
+</div>
+
 
 </body>
 </html>
