@@ -10,23 +10,16 @@
 <body class="common">
 <div th:replace="fragments :: header"></div>
 
-<ul class="list-group list-group-flush" th:object="${category}">
-    <li class="list-group-item" th:text="*{description}"></li><br/>
-</ul><br/>
-
-<ul class="list-group list-group-flush" th:object="${category}">
-    <h3 class="list-group-item" th:text="*{name}"></h3><br/>
-</ul><br/>
-
+<h3> Wszystkie przepisy </h3>
 
 <ul>
-    <li th:each="display: ${displaySelected}">
-        <a th:href="|/recipe/${display.id}|" th:text="${display.name}"></a>
-        <a style="color: red" th:href="|/delete/${display.id}|">Usuń</a>
-
+    <li th:each="recipe: ${allRecipe}">
+        <a th:href="|/recipe/${recipe.id}|" th:text="${recipe.name}"></a>
+        <a style="color: red" th:href="|/delete/${recipe.id}|">Usuń</a>
     </li>
 
 </ul>
+
 
 <a href="/">Powrót</a>
 </div>

@@ -64,7 +64,7 @@ public class HomeController {
     @GetMapping("/all")
     public String findAll(Model model) {
         model.addAttribute("allRecipe", recipeRepository.findAll());
-        return "display";
+        return "displayAll";
     }
 
 
