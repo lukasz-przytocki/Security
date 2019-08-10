@@ -2,7 +2,7 @@
     height: 100px;
     width: 100%;
     min-width: 100%;
-    /*background-image: url("food.jpg");*/
+    background-image: url('food.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -22,6 +22,25 @@
     background-size: cover; /* Resize the background image to cover the entire container */
     padding: 50px 100px;
 }
+
+.Desery {
+    width: 100%;
+    background-image: url('background.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 50px 100px;
+}
+
+.Śniadania {
+    width: 100%;
+    background-image: url('http://madameedith.com/wp-content/uploads/2016/04/%C5%9Bniadanie-na-s%C5%82odko-2-634x423.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 50px 100px;
+}
+
 
 .background {
     height: 100%;

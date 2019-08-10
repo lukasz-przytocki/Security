@@ -13,7 +13,7 @@ ARBUZOWO-TRUSKAWKOWY CHŁODNIK Z FETĄ I MIĘTĄ',0,'ARBUZOWO-TRUSKAWKOWY CHŁOD
 
 insert into RECIPE (ID, EQUIPMENT ,INGREDIENTS ,LIKE_NUMBER ,NAME ,PROCEDURE ,CATEGORY_ID )
 values (3,'okrągłą gofrownicę, blender ręczny, sitko o drobnych oczkach, rózgę kuchenną','mąka pszenna bio – 320 g, syrop klonowy bio – 80 ml ,laska wanilii – 2 szt., roztopione masło – 120 g , jaja (rozmiar L) – 4 szt., mleko – 400 ml, proszek do pieczenia – 1 czubata łyżeczka, świeże maliny – 250 g , borówki amerykańskie – 125 g ,syrop klonowy – do polania gofrów',
-        55,'AMERYKAŃSKIE GOFRY','KROK 1: UBIJAMY ŻÓŁTKA JAJ Z SYROPEM KLONOWYM
+        10,'AMERYKAŃSKIE GOFRY','KROK 1: UBIJAMY ŻÓŁTKA JAJ Z SYROPEM KLONOWYM
 Żółtka oddzielamy od białek i ubijamy w misce z syropem klonowym oraz nasionkami laski wanilii. Do ubijanych żółtek stopniowo dodajemy rozpuszczone masło. Mieszamy tak długo, aż ciasto będzie miało jednolitą, aksamitną konsystencję.
 Mąkę przesiewamy do miski, łączymy z proszkiem do pieczenia i stopniowo dodajemy do ubijanych żółtek. Całość mieszamy za pomocą rózgi kuchennej, stopniowo dodając mleko.
 KROK 2: UBIJAMY BIAŁKA JAJ
@@ -46,7 +46,7 @@ values(8,'plastikowe pojemniki z wieczkiem, gałkownicę','śmietanka UHT 30% �
  Przygotowujemy plastikowe pojemniki i przekładamy do nich masę. Zamykamy pudełka, uderzamy dnem o blat, aby pozbyć się pęcherzyków powietrza. Mrozimy ok. 12 godzin. Lody nakładamy gałkownicą do pucharków.', 3);
 
  insert into RECIPE (ID, EQUIPMENT ,INGREDIENTS ,LIKE_NUMBER ,NAME ,PROCEDURE ,CATEGORY_ID )
-values(9,'garnek','mleko 3,2% – 500 ml, cukier trzcinowy – 3 łyżki, laska wanilii – 1 szt., mąka ziemniaczana – 2 łyżki, żółtka jaj – 2 szt., sól – 1 szczypta, masło – 1 łyżka, jabłka – 1-2 szt., herbatniki petitki, truskawki',5,'BUDYŃ WANILIOWY Z JABŁKAMI',
+values(9,'garnek','mleko 3,2% – 500 ml, cukier trzcinowy – 3 łyżki, laska wanilii – 1 szt., mąka ziemniaczana – 2 łyżki, żółtka jaj – 2 szt., sól – 1 szczypta, masło – 1 łyżka, jabłka – 1-2 szt., herbatniki petitki, truskawki',6,'BUDYŃ WANILIOWY Z JABŁKAMI',
 'Do garnka wlewamy 350 ml mleka i dodajemy laskę wanilii przekrojoną wzdłuż na pół. Mleko zagotowujemy. Gdy mleko się zagotuje, usuwamy laskę wanilii.
 Do miski wlewamy resztę mleka, dodajemy cukier, żółtka i sól. Mieszamy. Dodajemy mąkę ziemniaczaną i całość mieszamy dokładnie trzepaczką.
 Cały czas mieszając, dolewamy do zagotowanego mleka mieszankę z żółtkami. Mieszamy do zgęstnienia. Dodajemy 1 łyżkę masła i intensywnie mieszamy, aż tłuszcz się rozpuści. Jabłka obieramy ze skórki i ścieramy na tarce o grubych oczkach.
@@ -55,7 +55,7 @@ Na dno pucharków nakładamy warstwę budyniu, następnie herbatników, na końc
 insert into RECIPE (ID, EQUIPMENT ,INGREDIENTS ,LIKE_NUMBER ,NAME ,PROCEDURE ,CATEGORY_ID )
 values(10,'folia aluminiowa,moździerz,grill z pokrywą ','MARYNATA BBQ, cebula – 1 szt., olej rzepakowy – 50 ml, pomidory pelati – 500 g, pieprz cayenne – pół łyżeczki, ziele angielskie – 4 szt., goździki – 4 szt., sól – 1 szczypta, czarny pieprz – 1 szczypta, sos worcestershire – 30 ml, miód – 1 łyżeczka, piwo – 50 ml,
 ŻEBERKA Z DODATKAMI: żeberka wieprzowe – 500 g, gałązki rozmarynu – 2 szt., surowy, wędzony boczek w plastrach – 1 opakowanie (100 g), ziemniaki (odmiana do grillowania i pieczenia, np. francuskie) – 8 szt., świeży rozmaryn – 6 gałązek, czarny pieprz – do oprószenia ziemniaków, świeża kolendra – kilka listków, ser wędzony Pilos – 50 g',
-15, 'WOLNO GRILLOWANE ŻEBERKA BBQ','Cebulę pokrojoną w kostkę przesmaż na oleju w garnku. Dodaj pomidory pelati. Dopraw pieprzem cayenne, zmiażdżonymi w moździerzu goździkami oraz ziarnami ziela angielskiego, solą i pieprzem. Gotuj do zredukowania pomidorów, co jakiś czas mieszając. Marynata powinna przypominać konsystencją syrop.
+8, 'WOLNO GRILLOWANE ŻEBERKA BBQ','Cebulę pokrojoną w kostkę przesmaż na oleju w garnku. Dodaj pomidory pelati. Dopraw pieprzem cayenne, zmiażdżonymi w moździerzu goździkami oraz ziarnami ziela angielskiego, solą i pieprzem. Gotuj do zredukowania pomidorów, co jakiś czas mieszając. Marynata powinna przypominać konsystencją syrop.
 Do zredukowanych pomidorów dodajemy sos worcestershire, miód i piwo. Mieszamy. Na złożony na pół płat folii aluminiowej kładziemy gałązkę rozmarynu i wylewamy niewielką porcję sosu BBQ. W pozostałej marynacie obtaczamy żeberka i przekładamy je na folię. Resztkę marynaty wylewamy na żeberka, na wierzch zaś kładziemy gałązkę rozmarynu.
 Żeberka dokładnie zawijamy w folię. Żeberka w folii kładziemy na ruszt i grillujemy (nie nad żarem) ok. 3 godzin. Pod koniec grillowania przesuwamy je nad żar i grillujemy chwilę, aż się zarumienią. Ziemniaki kroimy na pół i oprószamy pieprzem. Na połówki ziemniaków kładziemy kawałki gałązek rozmarynu i owijamy je plastrami boczku.
 Ziemniaki układamy na grillu płaską stroną do rusztu i grillujemy ok. pół godziny. Upieczone żeberka posypujemy świeżą kolendrą i podajemy z ziemniakami. Nad ziemniakami kruszymy na kawałki wędzony twaróg.',4);

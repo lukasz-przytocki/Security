@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -23,11 +22,10 @@ public class RecipeController {
 
     @GetMapping("/recipe/{id}")
     public String home(Model model, @PathVariable Long id) {
-        Recipe recipe = new Recipe();
         Optional<Recipe> optional = recipeRepository.findById(id);
 
         if (optional != null) {
-            recipe = optional.get();
+            Recipe recipe = optional.get();
             model.addAttribute("result", recipe);
             return "details";
         } else {

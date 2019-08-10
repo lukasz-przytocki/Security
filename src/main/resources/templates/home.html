@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<head>
+<head th:include="fragments :: head">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <title>Książka kucharska</title>
 </head>
 <body class="common">
-
-<h4>Witaj na stronie z najlepszymi przepisami</h4>
+<div th:replace="fragments :: header"></div>
+<h3>Witaj na stronie z najlepszymi przepisami</h3>
 
 <ul>
-    <h3>Wybierz typ potrawy</h3>
+    <h4 style="color: brown">Wybierz typ potrawy</h4>
     <li th:each="cat: ${category}">
     <a th:href="|/display/${cat.id}|" th:text="${cat.name}"></a>
     </li>
@@ -22,7 +22,7 @@
 <a href="/all/">Wyświetl wszystkie</a>
 
 <ul>
-    <h3>Najpopularniejsze dania</h3>
+    <h4 style="color: brown">Najpopularniejsze dania</h4>
     <li th:each="popular: ${mostPolular}">
         <span style="font-weight:bold " th:text="${popular.name}"></span>
         <a th:href="|/recipe/${popular.id}">Sprawdź!</a>
