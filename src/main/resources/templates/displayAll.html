@@ -16,7 +16,7 @@
     <li th:each="recipe: ${allRecipe}">
         <a th:href="|/recipe/${recipe.id}|" th:text="${recipe.name}"></a>
         <a style="color: green; font-size: 13px; font-style: italic;" th:href="|/recipe/${recipe.id}|" th:text="|Liked:${recipe.likeNumber}|"></a>
-        <a style="color: red" th:href="|/delete/${recipe.id}|">Usuń</a>
+        <a style="color: red" th:href="|/deleteAll/${recipe.id}|">Usuń</a>
     </li>
 
 </ul>
