@@ -11,6 +11,7 @@
 <div style="width: 90%; margin: 30px">
     <form action="/edit" method="post" th:object="${recipeToEdit}">
         <input type="hidden" th:field="*{id}"/>
+        <input type="hidden" th:field="*{likeNumber}" />
         <div class="form-group">
             <label for="name">Nazwa potrawy</label>
             <textarea th:field="*{name}" class="form-control" rows="1" id="name"></textarea>
