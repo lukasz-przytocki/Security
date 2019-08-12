@@ -22,6 +22,7 @@
 <ul>
     <li th:each="display: ${displaySelected}">
         <a th:href="|/recipe/${display.id}|" th:text="${display.name}"></a>
+        <a style="color: green; font-size: 13px; font-style: italic;" th:href="|/recipe/${display.id}|" th:text="|Liked:${display.likeNumber}|"></a>
         <a style="color: red" th:href="|/delete/${display.id}|">Usuń</a>
 
     </li>

@@ -1,4 +1,4 @@
-package pl.lukasz.demo;
+package pl.lukasz.demo.Category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

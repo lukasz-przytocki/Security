@@ -5,6 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import pl.lukasz.demo.Category.Category;
+import pl.lukasz.demo.Category.CategoryRepository;
+import pl.lukasz.demo.Recipe.Recipe;
+import pl.lukasz.demo.Recipe.RecipeRepository;
 
 
 import java.util.List;
@@ -50,15 +54,15 @@ public class HomeController {
 
     @GetMapping("/display/{id}")
     public String display(Model model, @PathVariable Long id) {
-        Optional<Category> optional= categoryRepository.findById(id);
-            Category category=optional.get();
-            if (recipeRepository.findByCategory_Id(id) != null) {
-                model.addAttribute("displaySelected", recipeRepository.findByCategory_Id(id));
-                model.addAttribute("category", category);
-                return "display";
-            } else {
-                return "error";
-            }
+        Optional<Category> optional = categoryRepository.findById(id);
+        Category category = optional.get();
+        if (recipeRepository.findByCategory_Id(id) != null) {
+            model.addAttribute("displaySelected", recipeRepository.findByCategory_Id(id));
+            model.addAttribute("category", category);
+            return "display";
+        } else {
+            return "error";
+        }
     }
 
     @GetMapping("/all")

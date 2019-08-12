@@ -1,4 +1,6 @@
-package pl.lukasz.demo;
+package pl.lukasz.demo.Recipe;
+
+import pl.lukasz.demo.Category.Category;
 
 import javax.persistence.*;
 
