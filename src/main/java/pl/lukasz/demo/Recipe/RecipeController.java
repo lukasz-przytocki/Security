@@ -25,7 +25,7 @@ public class RecipeController {
     public String home(Model model, @PathVariable Long id) {
         Optional<Recipe> optional = recipeRepository.findById(id);
 
-        if (optional != null) {
+        if (optional.isPresent()) {
             Recipe recipe = optional.get();
             model.addAttribute("result", recipe);
             return "details";
@@ -49,7 +49,7 @@ public class RecipeController {
     public String edit(Model model, @PathVariable Long id) {
         Optional<Recipe> optional = recipeRepository.findById(id);
 
-        if (optional != null) {
+        if (optional.isPresent()) {
             Recipe recipe = optional.get();
             model.addAttribute("recipeToEdit", recipe);
             model.addAttribute("category", categoryRepository.findAll());
@@ -70,7 +70,7 @@ public class RecipeController {
     public String like(@PathVariable Long id) {
         Optional<Recipe> optional = recipeRepository.findById(id);
 
-        if (optional != null) {
+        if (optional.isPresent()) {
             Recipe recipe = optional.get();
             recipe.setLikeNumber(recipe.getLikeNumber()+1);
             recipeRepository.save(recipe);
