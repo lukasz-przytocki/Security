@@ -72,3 +72,10 @@ values(12,'głęboki garnek, ręcznik kuchenny','SOS: ogórki marynowane – 6 s
 1,'SMAŻONY ŻÓŁTY SER Z SOSEM TATARSKIM','Czosnek i szczypiorek drobno siekamy, a cebulę, paprykę i ogórki kroimy w grubą kostkę. Wszystkie składniki łączymy w misce z majonezem. Dodajemy kapary, skórkę startą z cytryny i wyciśnięty z niej sok.
 Doprawiamy pieprzem i mieszamy. Odstawiamy sos, by smaki się przegryzły. Ser kroimy w plastry o grubości do 1,5 cm. Kawałki sera obtaczamy kolejno w mące, jajku i bułce, a następnie ponownie w jajku i bułce, by panierka była gruba i utrzymała ser w środku.
  Panierkę dobrze dociskamy do sera. Ser smażymy na głębokim tłuszczu na złoty kolor i odsączamy na papierowym ręczniku. Porcję sosu wykładamy na talerz i układamy na niej ser. Dekorujemy gałązkami szczypiorku. Podajemy od razu po usmażeniu.',4);
+
+INSERT INTO USER(username, password, enabled) values ('admin', '{noop}admin', true);
+INSERT INTO USER(username, password, enabled) values ('user', '{noop}user', true);
+
+INSERT INTO USER_ROLE(username, role) values ('admin', 'ROLE_ADMIN');
+INSERT INTO USER_ROLE(username, role) values ('user', 'ROLE_USER');
+
